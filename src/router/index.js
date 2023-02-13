@@ -1,6 +1,9 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import CandyPage from '../views/CandyPage.vue'
+import AddCandy from '../components/AddCandy.vue'
+import EditCandy from '../components/EditCandy.vue'
+import DeleteCandy from '../components/DeleteCandy.vue'
 
 Vue.use(VueRouter)
 
@@ -8,7 +11,22 @@ const routes = [
   {
     path: '/',
     name: 'home',
-    component: HomeView
+    component: CandyPage
+  },
+  {
+    path: '/add',
+    name: 'addCandy',
+    component : AddCandy
+  },
+   {
+    path: '/edit',
+    name: 'editCandy',
+    component : EditCandy
+  },
+   {
+    path: '/delete',
+    name: 'deleteCandy',
+    component : DeleteCandy
   },
   {
     path: '/about',
