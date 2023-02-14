@@ -1,8 +1,26 @@
 <template>
     <div>
-        <h2>what the hell</h2>
-        <h2>{{ sweet.name }}</h2>
-        <p>{{ sweet.id }}</p>
+    <v-table>
+        <thread>
+            <tr>
+                <th class="text-left">
+                    Candy
+                </th>
+                <th class="text-left">
+                    ID
+                </th>
+                <!-- <th class="text-left">
+                        Candy Owner
+                      </th> -->
+            </tr>
+        </thread>
+        <tbody>
+            <tr v-for="sweet in candies" :key="sweet.id" :name="sweet.name" :id="sweet.id">
+                <td>{{ sweet.name }}</td>
+                <td>{{ sweet.id }}</td>
+            </tr>
+        </tbody>
+    </v-table>
     </div>
 </template>
 

@@ -4,6 +4,9 @@ import CandyPage from '../views/CandyPage.vue'
 import AddCandy from '../components/AddCandy.vue'
 import EditCandy from '../components/EditCandy.vue'
 import DeleteCandy from '../components/DeleteCandy.vue'
+import UserLogin from '../components/UserLogin.vue'
+import UserSignup from '../components/UserSignup.vue'
+import UserLogout from '../components/UserLogout.vue'
 
 Vue.use(VueRouter)
 
@@ -18,15 +21,30 @@ const routes = [
     name: 'addCandy',
     component : AddCandy
   },
-   {
+  {
     path: '/edit',
     name: 'editCandy',
     component : EditCandy
   },
-   {
+  {
     path: '/delete',
     name: 'deleteCandy',
     component : DeleteCandy
+  },
+  {
+    path: '/login',
+    name: 'userlogin',
+    component : UserLogin
+  },
+  {
+    path: '/signup',
+    name: 'signUp',
+    component : UserSignup
+  },
+  {
+    path: '/logout',
+    name: 'logout',
+    component : UserLogout
   },
   {
     path: '/about',

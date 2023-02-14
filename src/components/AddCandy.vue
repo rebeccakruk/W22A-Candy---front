@@ -10,13 +10,14 @@
 </template>
 
 <script>
-import axios from 'axios'
+import axios from 'axios';
+import cookies from 'vue-cookies'
 
     export default {
         name : "AddCandy",
         data() {
             return {
-                name : ""
+                name : "",
             }
         },
         methods: {
@@ -25,6 +26,7 @@ import axios from 'axios'
                         url: `${process.env.VUE_APP_BASE_DOMAIN}/api/candy_new`,
                         method: "POST",
                         data: {
+                            // user_id: this.user_id,
                             name: this.name
                         }
                     }).then((response) => {
@@ -33,6 +35,9 @@ import axios from 'axios'
                     }).catch((error) => {
                         console.log(error);
                     })
+                },
+                mounted () {
+                    this.user_id = cookies.get('login');
                 },
             }
         }
